@@ -1,0 +1,51 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.button#language-selector {  
+  border: solid red 1px;
+}
+
+
+.language-menu {
+	position: fixed;
+	top: 60vh;
+	left: 8vw;
+	z-index: 4;
+	background: white;
+	opacity: 0;
+	visibility: hidden;
+	box-shadow: 0 .5vw 4vw rgba(0,0,0,.4);
+	transition: all .2s ease;
+}
+
+	.language-menu.expanded {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	.language-menu .language {
+		text-transform: uppercase;
+		font-size: 1rem;
+		line-height: 1rem;
+		font-weight: bold;
+		padding: 1.5vw;
+		border-bottom: 1px solid #DDDDDD;
+		cursor: pointer;
+	}
+
+		.language-menu .language span {
+			text-transform: none;
+			font-size: .8rem;
+			line-height: .8rem;
+			font-weight: normal;
+		}
+
+		.language-menu .language:last-child {
+			border-bottom: none;
+		}
+
+		.language-menu .language.selected {
+			background: var(--highlight);
+		}
